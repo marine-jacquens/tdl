@@ -1,0 +1,123 @@
+body{
+	margin:0;
+	overflow-y : auto;
+}
+
+h2, 
+label, 
+a, 
+.input{
+	font-family: 'Poppins', sans-serif;
+}
+
+
+
+/*HEADER*/
+
+h1{
+	font-family: 'Lobster', cursive;
+	color:white;
+}
+
+nav{
+	display: flex;
+	justify-content: space-between;
+	background-color:orange;
+	width:auto;
+	padding-right:2%;
+	padding-left:2%;
+}
+
+nav a {
+
+	background-color:white;
+	font-size:;
+	padding:;
+	color:orange;
+}
+
+/*INDEX*/
+
+.main_index{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.form{
+	margin-top:5%;
+	margin-bottom:5%;
+	display: flex;
+	flex-direction: column;
+	border-radius: 5px;
+	width:30%;
+
+}
+
+.form h2{
+	text-align: center;
+	margin:0;
+	color:white;
+	background-color:orange;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+
+	
+}
+
+.input_part{
+	display:flex;
+	flex-direction: column;
+	padding:5%;
+	border:1px solid orange;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+
+}
+
+#mail::placeholder,#email::placeholder{color:orange;}
+
+.input_part label, .input_part a{
+	color:orange;
+}
+
+.input{
+	border:1px solid orange;
+	padding:3%;
+	margin-bottom: 5%;
+	outline-color: orange;
+	color:orange;
+}
+
+.submit{
+	color:orange;
+	background-color:white;
+}
+
+.submit:hover{
+	transition:.5s;
+	background-color:orange;
+	color:white;
+}
+
+#subscribeForm{
+	display: none;
+}
+
+/*FOOTER*/
+
+.footer{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color:orange;
+	color:white;
+	height:180px;
+}
+
+.footer_text{
+	display: flex;
+	justify-content: space-between;
+	width:15%;
+	align-items: baseline;
+}
