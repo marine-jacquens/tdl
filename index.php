@@ -44,24 +44,34 @@
 
         </form>
 
-        <?php if(isset($_POST['subscribe'])){$user->register($_POST['mail'],$_POST['password'],$_POST['check_password']);} ?>
+        <?php 
 
-        <form action="index.php" method="POST" class="form" id="subscribeForm">
+        if(isset($_POST['subscribe'])){$user->register($_POST['surname'],$_POST['firstname'],$_POST['mail'],$_POST['password'],$_POST['check_password']);} 
+
+        ?>
+
+        <form action="" method="POST" class="form" id="subscribeForm">
 
             <h2>Inscription</h2>
 
             <div class="input_part">
 
+                <label for="surname">Nom</label>
+                <input type="text" name="surname" placeholder="jacquens" class="input" required>
+
+                <label for="firstname">Prénom</label>
+                <input type="text" name="firstname" placeholder="marine" class="input" required>
+
                 <label for="mail">Email</label>
-                <input type="email" name="mail" placeholder="marine.jacquens@gmail.com" class="input" id="email">
+                <input type="email" name="mail" placeholder="marine.jacquens@gmail.com" class="input" id="email" required>
 
                 <label for="password">Mot de passe</label>
-                <input type="password" name="password" class="input">
+                <input type="password" name="password" class="input" required>
 
                 <label for="check_password">Confirmation de mot de passe</label>
-                <input type="password" name="check_password" class="input">
+                <input type="password" name="check_password" class="input" required>
 
-                <input type="submit" name="subscribe" value="VALIDER" class="input submit">
+                <input type="submit" name="subscribe" value="VALIDER" class="input submit" id="subscribe">
 
                 <a href="" id="showSignIn">Déjà inscrit ?</a>
                 

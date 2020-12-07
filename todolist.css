@@ -61,8 +61,6 @@ nav a {
 	background-color:orange;
 	border-top-right-radius: 5px;
 	border-top-left-radius: 5px;
-
-	
 }
 
 .input_part{
@@ -75,7 +73,10 @@ nav a {
 
 }
 
-#mail::placeholder,#email::placeholder{color:orange;}
+::placeholder{
+	color:grey;
+	font-style: italic; 
+}
 
 .input_part label, .input_part a{
 	color:orange;
