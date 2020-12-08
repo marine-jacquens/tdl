@@ -38,7 +38,7 @@
 
                 <input type="submit" name="connexion" value="VALIDER"class="input submit">
 
-                <a href="" id="showSignUp">Vous n'avez pas encore de compte ? </a>
+                <a href="" id="showSignUp"> Vous n'avez pas encore de compte ? </a>
             </div>
             
 

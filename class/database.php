@@ -12,7 +12,7 @@ class Database
    {
        $this->db_host = "localhost";
        $this->db_login = "root";
-       $this->db_password = "";
+       $this->db_password = "root";
        $this->db_name = "tdl";
 
 
