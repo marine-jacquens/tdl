@@ -1,0 +1,62 @@
+body{
+	
+}
+
+p, h1, h2{
+	margin:0;
+}
+
+textarea{
+	height:50px;
+	resize: none;
+}
+
+.subscriptionForm{
+	display: none;
+	flex-direction:column;
+}
+
+.connexionForm{
+	display:flex;
+	flex-direction:column;
+}
+
+.navbar,.navbar form{
+	display: flex;
+	justify-content: space-between;
+}
+
+.addTaskForm{
+	display: flex;
+	flex-direction: column;
+}
+
+.taskList{
+	margin-top:5%;
+	display: flex;
+	justify-content: space-around;
+	
+	
+}
+
+.todolist, .accomplished{
+	background-color: lightgray;
+	width:40%;
+	padding: 2%;
+}
+
+.card{
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	background-color: grey;
+	padding: 5%;
+	margin-bottom:2%;
+}
+
+.todolist h1, .accomplished h1{
+	text-align: center;
+	margin-bottom:5%;
+}
+
+
