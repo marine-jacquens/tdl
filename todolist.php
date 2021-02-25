@@ -63,7 +63,7 @@ if(isset($_SESSION['user']['id_user'])){}else{header('location:index.php');}
 							<button type="submit" id="accomplishedBtn"  data-id="<?php echo $tasks['id_task']; ?>" class="doneButton">Terminé</button>
 						</div>
 						<div>
-							<i class="fal fa-times-square" data-id="<?php echo $tasks['id_task'];?>"></i>
+							<i id="removeBtn" class="fal fa-times-square" data-id="<?php echo $tasks['id_task'];?>"></i>
 						</div>
 					</div>
 				<?php 		}
@@ -90,7 +90,7 @@ if(isset($_SESSION['user']['id_user'])){}else{header('location:index.php');}
 							<p><?php echo $accomplishedTasks['description'].'<br/><br/> terminée le : '.$accomplishedTasks['date_completed']?></p>
 						</div>
 						<div>
-							<i class="fal fa-times-square" data-id="<?php echo $accomplishedTasks['id_task']; ?>"></i>
+							<i id="removeBtn" class="fal fa-times-square" data-id="<?php echo $accomplishedTasks['id_task']; ?>"></i>
 						</div>
 					</div>
 				<?php }} ?>
