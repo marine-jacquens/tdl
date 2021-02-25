@@ -11,11 +11,11 @@
 			<div class="card">
 				<div>
 					<h2><?php echo $tasks['title']?></h2>
-					<p><?php echo $tasks['description'].'<br/> créée le : '.$tasks['date_created']?></p>
-					<button type="submit" id="accomplishedBtn"  data-id="<?php echo $tasks['id_task']; ?>">Terminé</button>
+					<p><?php echo $tasks['description'].'<br/><br/> créée le : '.$tasks['date_created']?></p>
+					<button type="submit" id="accomplishedBtn"  data-id="<?php echo $tasks['id_task']; ?>" class="doneButton">Terminé</button>
 				</div>
 				<div>
-					<i id="removeBtn" class="icon fa fa-trash" data-id="<?php echo $tasks['id_task']; ?>"></i>
+					<i id="removeBtn" class="fal fa-times-square" data-id="<?php echo $tasks['id_task']; ?>"></i>
 				</div>
 			</div>
 
