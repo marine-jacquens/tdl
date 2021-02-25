@@ -1,14 +1,91 @@
 body{
-	
+	font-family: 'Montserrat', sans-serif;
+	margin:0 auto;
+}
+
+main{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: lightblue;
+	min-height:750px;
+
+}
+
+.navbar{
+	height:30px;
+	padding-left:2%;
+	padding-right:2%;
+	padding-top:1%;
+	padding-bottom:1%;
+	background-color: lightblue;
+}
+
+.navbar,.navbar form{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo{
+	font-family: 'Lobster', cursive;
+}
+
+.logOutButton{
+	color:white;
+	background-color: transparent;
+	border:none;
+	font-size: 20px;
+}
+
+.helloMessage{
+	color: white;
+}
+
+.logOutButton:hover{
+	color:#56CFE9;
 }
 
 p, h1, h2{
-	margin:0;
+	margin-top:0;
 }
 
-textarea{
-	height:50px;
-	resize: none;
+h2{
+	color: white;
+}
+
+a{
+	text-decoration: none;
+	color:white;
+	font-size: 20px ;
+}
+
+a:hover{
+	transition: .5s;
+	color: #56CFE9;
+
+}
+
+.titleIndex{
+	text-align: center;
+	font-family: 'Lobster', cursive;
+	color:#56CFE9;
+	margin-bottom:5%;
+}
+
+.subscriptionForm,.connexionForm{
+	display: flex;
+	flex-direction: column;
+	width:25%;
+	background-color: white;
+	padding:5%;
+	border-radius:5px;
+}
+
+.subscriptionForm label,
+.connexionForm label{
+	color: #56CFE9;
 }
 
 .subscriptionForm{
@@ -21,26 +98,89 @@ textarea{
 	flex-direction:column;
 }
 
-.navbar,.navbar form{
+.input{
+	height:25px;
+	border-color:#56CFE9;
+	border:.1px solid #56CFE9;
+	border-radius:5px;
+	margin-bottom:8%;
+	font-family: 'Montserrat', sans-serif;
+	padding:2%;
+	outline-color:#56CFE9;
+}
+
+.button{
+	height:40px;
+	background-color: #56CFE9;
+	color: white;
+	border:.1px solid #56CFE9;
+	border-radius:5px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	outline-color:#56CFE9;
+}
+
+.button:hover{
+	transition: .5s;
+	background-color: #4192A4;
+	color:white;
+	border:.1px solid #4192A4;
+
+}
+
+.toDoListMain{
+	padding-left:10%;
+	padding-right:10%;
+}
+
+.addTaskFormSection{
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
+	align-items: center;
+	width:100%;
 }
 
 .addTaskForm{
 	display: flex;
 	flex-direction: column;
+	width:70%;
+	padding:5%;
+	border-radius:5px;
 }
+
+.addTaskForm label{
+	color:white;
+}
+
+.addTaskForm textarea{
+	outline-color:#56CFE9;
+	border:1px solid #56CFE9;
+	height:70px;
+	resize: none;
+	border-radius:5px;
+	margin-bottom:5%;
+	padding:2%;
+	font-family: 'Montserrat', sans-serif;
+
+}
+
+.titleToDoList{
+	font-family: 'Lobster', cursive;
+	color: white;
+	text-align: center;
+}
+
 
 .taskList{
 	margin-top:5%;
 	display: flex;
 	justify-content: space-around;
-	
-	
+	width:100%;
 }
 
 .todolist, .accomplished{
-	background-color: lightgray;
+	background-color: white;
+	border-radius: 5px;
 	width:40%;
 	padding: 2%;
 }
@@ -48,15 +188,96 @@ textarea{
 .card{
 	display: flex;
 	justify-content: space-between;
-	align-items: baseline;
-	background-color: grey;
+	align-items: top;
+	background-color: #56CFE9;
 	padding: 5%;
 	margin-bottom:2%;
+}
+
+.card i{
+	color: white;
+
+}
+
+.card i:hover{
+	transition: .5s;
+	color: #4192A4;
 }
 
 .todolist h1, .accomplished h1{
 	text-align: center;
 	margin-bottom:5%;
+}
+
+.doneButton{
+	background-color: transparent;
+	border-radius: 5px;
+	border:1px solid #4192A4;
+	padding:2%;
+	color:#4192A4;
+	font-family: 'Montserrat', sans-serif;
+	outline:#4192A4;
+}
+
+.doneButton:hover{
+	transition: .5s;
+	background-color: #4192A4;
+	color:white;
+}
+
+
+
+@media screen and (max-height: 450px) {
+ 
+
+}
+
+@media screen and (max-width: 1280px)
+{
+
+}
+
+@media screen and (max-width: 1024px)
+{
+	.subscriptionForm,.connexionForm{
+
+		width:50%;
+
+	}
+}
+
+@media screen and (max-width: 900px)
+{
+
+	.taskList{
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.todolist, .accomplished{
+		width:100%;
+		margin-bottom: 5%;
+	}
+
+	
+}
+
+@media screen and (max-width: 768px)
+{
+	
+
+}
+
+
+@media screen and (max-width: 630px)
+{
+
+}
+
+
+@media screen and (max-width: 480px)
+{
+	
 }
 
 

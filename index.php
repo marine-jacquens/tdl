@@ -16,6 +16,10 @@ if(isset($_SESSION['user']['id_user'])){header('location:todolist.php');}
 	<link rel="stylesheet" type="text/css" href="index.css">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -23,7 +27,6 @@ if(isset($_SESSION['user']['id_user'])){header('location:todolist.php');}
 
 	<main>
 
-		<h1>To do list</h1>
 		<?php include('includes/inscription.php')?>
 		<?php include('includes/connexion.php')?>
 

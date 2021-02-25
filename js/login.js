@@ -25,7 +25,7 @@ $(document).ready(function(){
 					$(location).attr('href','todolist.php');
 				}
 				else{
-					messageConnexion.html(html);
+					$('#messageConnexion').html(html);
 				}
 					
 				}, 

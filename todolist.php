@@ -16,40 +16,31 @@ if(isset($_SESSION['user']['id_user'])){}else{header('location:index.php');}
 	<link rel="stylesheet" type="text/css" href="index.css">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
 </head>
 <body>
 
 	<header><?php include('includes/header.php')?></header>
 
-	<main>
+	<main class="toDoListMain">
 
-		<?php 
-
-			if(isset($_SESSION['user']['mail'])){
-
-				echo "Salut ".$_SESSION['user']['firstname'];
-
-			}
-			else{
-				header('location:index.php');
-			}
-			
-		?>
-
-		<section>
-
-			<h1>Ajout de tâches</h1>
+		<section class="addTaskFormSection">
 
 			<form action="#" method="POST" class="addTaskForm" id="saveTask">
 
+				<h1 class="titleToDoList">Ajout de tâches</h1>
+
 				<div id="alert"></div>
 				<label for="title">Titre</label>
-				<input type="text" name="title" id="title">
+				<input type="text" name="title" id="title" class="input">
 
 				<label for="title">Description</label>
 				<textarea name="title" id="description"></textarea>
 
-				<input type="submit" name="saveTask" value="ENREGISTRER" id="saveTaskButton">
+				<input type="submit" name="saveTask" value="ENREGISTRER" id="saveTaskButton" class="button">
 
 			</form>
 			
@@ -57,7 +48,7 @@ if(isset($_SESSION['user']['id_user'])){}else{header('location:index.php');}
 		<section class="taskList">
 
 			<div class="todolist">
-				<h1>Liste de tâche(s) à faire</h1>	
+				<h1 class="titleIndex">Liste de tâche(s) à faire</h1>	
 				<div id="tasks">
 					<?php 
 						$displaySavedTasks = $task->displayTask();
@@ -68,11 +59,11 @@ if(isset($_SESSION['user']['id_user'])){}else{header('location:index.php');}
 					<div class="card">
 						<div>
 							<h2><?php echo $tasks['title']?></h2>
-							<p><?php echo $tasks['description'].'<br/> créée le : '.$tasks['date_created']?></p>
-							<button type="submit" id="accomplishedBtn"  data-id="<?php echo $tasks['id_task']; ?>">Terminé</button>
+							<p><?php echo $tasks['description'].'<br/><br/> créée le : '.$tasks['date_created']?></p>
+							<button type="submit" id="accomplishedBtn"  data-id="<?php echo $tasks['id_task']; ?>" class="doneButton">Terminé</button>
 						</div>
 						<div>
-							<i id="removeBtn" class="icon fa fa-trash" data-id="<?php echo $tasks['id_task']; ?>"></i>
+							<i class="fal fa-times-square" data-id="<?php echo $tasks['id_task'];?>"></i>
 						</div>
 					</div>
 				<?php 		}
@@ -85,7 +76,7 @@ if(isset($_SESSION['user']['id_user'])){}else{header('location:index.php');}
 			</div>
 
 			<div class="accomplished">
-				<h1>Liste de tâche(s) accomplis</h1>
+				<h1 class="titleIndex">Liste de tâche(s) terminée(s)</h1>
 				<div id="accomplishedTasks">
 					<?php
 						$displayAccomplishedTasks = $task->displayAcomplishedTask();
@@ -96,10 +87,10 @@ if(isset($_SESSION['user']['id_user'])){}else{header('location:index.php');}
 					<div class="card">
 						<div>
 							<h2><?php echo $accomplishedTasks['title']?></h2>
-							<p><?php echo $accomplishedTasks['description'].'<br/> terminée le : '.$accomplishedTasks['date_completed']?></p>
+							<p><?php echo $accomplishedTasks['description'].'<br/><br/> terminée le : '.$accomplishedTasks['date_completed']?></p>
 						</div>
 						<div>
-							<i id="removeBtn" class="icon fa fa-trash" data-id="<?php echo $accomplishedTasks['id_task']; ?>"></i>
+							<i class="fal fa-times-square" data-id="<?php echo $accomplishedTasks['id_task']; ?>"></i>
 						</div>
 					</div>
 				<?php }} ?>

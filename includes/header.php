@@ -10,10 +10,12 @@
 
 	?>
 
-		<a href="index.php" class="logo">To do list</a>
+		<a href="todolist.php" class="logo">To do list</a>
+
+		<?php echo "<div class='helloMessage'> Salut ".$_SESSION['user']['firstname'].' <i class="fal fa-smile-wink"></i> </div>'; ?>
 			
 		<form action="#" method="POST">
-			<button type="submit" name="submitDeconnexion">
+			<button type="submit" name="submitDeconnexion" class="logOutButton">
 				<i class="fal fa-sign-out-alt"></i>
 			</button>
 		</form>
