@@ -1,6 +1,6 @@
 <?php 
 ob_start();
-//session_start();
+require'class/config.php';
 if(isset($_SESSION['user']['id_user'])){header('location:todolist.php');}
 
 ?>
